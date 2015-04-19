@@ -5,20 +5,30 @@
 <head>
 <meta charset="utf-8">
 <title>Login Example.</title>
-<link rel="stylesheet"
-	href="http://jqueryvalidation.org/files/demo/site-demos.css">
+<!-- <link rel="stylesheet"
+	href="http://jqueryvalidation.org/files/demo/site-demos.css"> -->
 </head>
 <body>
-	<form id="loginform" action="LoginServlet" method="post">
-		<label for="field">UserName: </label> 
-		<input type="text" id="field"
-			name="uname"> <br> 
-		<label for="passwd">Password:</label>
-		<input type="password" class="left" id="passwd" name="pwd"> <br>  
-		<input type="submit" value="Submit"> 
+	<form method="POST" action="LoginServlet"
+		onsubmit="return checkForm(this);">
+		<fieldset>
+			<legend>Login Form</legend>
+			<p>
+				Username: <input title="Enter your username" type="text" required
+					pattern="\w+" name="uname">
+			</p>
+			<p>
+				Password: <input title="Password must contain numbers"
+					type="password" required pattern="\d+" name="pwd"
+					onchange="this.setCustomValidity(this.validity.patternMismatch ? this.title : '');">
+			</p>
+			<p>
+				<input type="submit" value="Login">
+			</p>
+		</fieldset>
 	</form>
 
-	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<!-- 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script
 		src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
 	<script
@@ -36,10 +46,10 @@
 				},
 				pwd : {
 					required : true,
-					number: true
+					number : true
 				}
 			}
 		});
-	</script>
+	</script> -->
 </body>
 </html>
