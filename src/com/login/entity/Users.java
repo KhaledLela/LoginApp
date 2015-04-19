@@ -25,6 +25,12 @@ public class Users implements Serializable{
     @Column(name = "id")
     private int id;
     
+	public Users() {
+	}
+	public Users(String fName, String lName) {
+		this.fName = fName;
+		this.lName = lName;
+	}
 	private String fName;
 	private String lName;
 	private String uName;

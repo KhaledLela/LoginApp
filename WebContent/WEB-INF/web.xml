@@ -7,4 +7,15 @@
     <welcome-file-list>
         <welcome-file>login.jsp</welcome-file>
     </welcome-file-list>
+    <context-param>
+    <description>Login name</description>
+    <param-name>username</param-name>
+    <param-value>root</param-value>
+    </context-param>
+    
+   <context-param>
+    <description>Login Password</description>
+    <param-name>passwd</param-name>
+    <param-value>123</param-value>
+    </context-param>
 </web-app>

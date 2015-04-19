@@ -7,7 +7,6 @@
 <title>Login Example.</title>
 <link rel="stylesheet"
 	href="http://jqueryvalidation.org/files/demo/site-demos.css">
-
 </head>
 <body>
 	<form id="loginform" action="LoginServlet" method="post">
